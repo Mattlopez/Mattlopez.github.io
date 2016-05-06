@@ -1,0 +1,355 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+header{
+  background-color: black;
+  Position: fixed;
+  margin-top: 0px;
+  /*left:0;
+  top: 0;*/
+  width: 100%;
+  /*padding-bottom: 20px;*/
+  /*height: 50px;*/
+  z-index: 99999;
+}
+
+
+header nav ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 40px 0 40px;
+  font-size: 19px;
+  float: right;
+  font-family: ubuntu;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: all 0.7s ease;
+}
+
+header nav ul li:hover, .dropdown:hover .dropbtn, li a.active, .dropdown .dropbtn.active {
+  background-color: orange;
+}
+
+body {
+  font-size: 26px;
+  line-height: 1.4;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  background: #eee;
+  min-height: calc(100vh - **footer height**);
+  /*max-height: 400px;*/
+}
+
+#main {
+  position: absolute;
+  display: inline-block;
+}
+
+.austir_logo_main {
+  -webkit-filter: invert(100%); /* Chrome, Safari, Opera */
+  filter: invert(100%);
+  background-image: url("../images/austir_logo_500x177.png");
+  height: 50%;
+  width: 40%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*position: absolute;*/
+  top: 40%;
+}
+
+.austir_logo{
+  margin: 0;
+  /*display:none;*/
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.twitter_logo{
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  height: 25px;
+  padding-right: 20px;
+}
+
+.facebook_logo{
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  height: 25px;
+  padding-right: 20px;
+}
+
+.love {
+  width: 100%;
+  overflow: auto;
+  /*border-top: 2px white
+  border-bottom: 2px white*/
+  /*width: 100%;
+  /*margin: auto;*/
+  /*height: 400px;*/*/
+  /*background-size: cover;
+  background-repeat: no-repeat;*/
+  /*background-image: url("../images/love.jpg");*/
+}
+
+.icon{
+  display:none;
+}
+
+.quote{
+  font-family: ubuntu;
+  padding:20px 20px 20px 400px;
+  margin: 10px;
+  display: block;
+  /*width: 100%;*/
+}
+
+
+#aboutsection{
+  padding: 20px 0px 20px 0px;
+  display: inline-block;;
+}
+
+.abouttext{
+  float:right;
+  width: 50%;
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.abouttext::first-letter {
+    font-family: ubuntu;
+    font-size: 200%;
+    color: black;
+}
+
+.disclaimer{
+  font-size: 10px;
+}
+
+.grey{
+  padding-left: 30px;
+}
+
+.grey_band{
+  position: relative;
+}
+
+.grey_text{
+  display: none;
+  font-style: ubuntu;
+  color: black;
+  font-size: 45px;
+}
+
+.grey_text_on{
+  display:block;
+  font-style: oblique;
+  font-weight: bold;
+  color: black;
+  font-size: 45px;
+  position: relative;
+  bottom: 250px;
+  left: 190px;
+  /*top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+  z-index: 99999;
+}
+
+.grey_text_off{
+  display:none;
+}
+
+
+.join{
+  font-family: ubuntu;
+  font-size: 50px;
+  padding:20px 20px 20px 400px;
+  margin: 10px;
+  display: block;
+  width: 100%;
+}
+
+a.grey:link{
+  width: 580px;
+  padding-left: 30px;
+  /*opacity: 0.4;*/
+}
+
+a.austir_logo:link{
+  height="35px";
+}
+
+.socialbuttons{
+  -webkit-filter: invert(100%); /* Chrome, Safari, Opera */
+  filter: invert(100%);
+  /*display:block;*/
+  float:right;
+  text-align: center;
+  padding: 0px 10px 0px 10px;
+}
+
+.box{
+  position: relative;
+	width: 100%;
+ 	height: 100px;
+	background-color: black;
+
+}
+
+.mail_list{
+  color:black;
+  font-style: ubuntu;
+}
+
+.button{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  display: inline-block;
+  padding: 4px 42px;
+  background: #black;
+  color: #121212;
+}
+
+.copyright{
+  color:white;
+  font-style: times;
+  font-size: 14px;
+  margin-top: 50px;
+  padding-top: 60px;
+}
+
+.form{
+  position: relative;
+  font-size: 25px;
+  font-style: ubuntu;
+  width: 100%;
+  margin: 0 auto;
+  display: inline-block;;
+  padding: 65px 0px 0px 15px;
+  height: 100vh;
+
+}
+
+.form_h1{
+  font-family: ubuntu;
+}
+
+input[type=text] {
+  background-color: #eee;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  width: 45%;
+}
+
+.grey_guitars{
+  /*float: right;*/
+  margin-right: 100px;
+  position: absolute;
+  z-index: 9999;
+  /* float: right; */
+  margin-left: 650px;
+  margin-bottom: 600px;
+}
+
+.credit{
+  font-size: 10px;
+  margin-left: 10px;
+  color: red;
+}
+
+
+/*Web Debugging tool:*/
+
+/**{
+Background-color: black;
+Color: green;
+Outline: 1px solid red;
+}*/
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+
+
+/******************************************
+/* Reponsive Code
+/*******************************************/
+
+@media screen and (max-width:1080px) and (min-width: 980px){
+	nav{
+		font-size: 18px;
+	}
+
+@media (max-width: 959px){
+  	.tout .button{
+  		margin-right: 1.5em;
+  	}
+
+    .austir_logo_main{
+      display:none;
+    }
+  }
+
+
+@media (max-width: 600px) {
+    .icon{
+      display: block;
+    }
+
+    .socialbuttons{
+      display:none
+    }
+
+    .topnav{
+      display:none;
+    }
+
+    .austir_logo_main{
+      display:none;
+    }
+
+
+}
